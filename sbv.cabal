@@ -114,7 +114,56 @@ Library
                   , Data.SBV.Tools.WeakestPreconditions
                   , Data.SBV.Trans
                   , Data.SBV.Trans.Control
-                  , Documentation.SBV.Examples.BitPrecise.BitTricks
+  other-modules   : Data.SBV.Client
+                  , Data.SBV.Client.BaseIO
+                  , Data.SBV.Core.AlgReals
+                  , Data.SBV.Core.Concrete
+                  , Data.SBV.Core.Data
+                  , Data.SBV.Core.Kind
+                  , Data.SBV.Core.Model
+                  , Data.SBV.Core.Operations
+                  , Data.SBV.Core.Floating
+                  , Data.SBV.Core.Sized
+                  , Data.SBV.Core.SizedFloats
+                  , Data.SBV.Core.Symbolic
+                  , Data.SBV.Control.BaseIO
+                  , Data.SBV.Control.Query
+                  , Data.SBV.Control.Types
+                  , Data.SBV.Control.Utils
+                  , Data.SBV.Compilers.C
+                  , Data.SBV.Compilers.CodeGen
+                  , Data.SBV.Lambda
+                  , Data.SBV.SMT.SMT
+                  , Data.SBV.SMT.SMTLib
+                  , Data.SBV.SMT.SMTLib2
+                  , Data.SBV.SMT.SMTLibNames
+                  , Data.SBV.SMT.Utils
+                  , Data.SBV.Provers.Prover
+                  , Data.SBV.Provers.ABC
+                  , Data.SBV.Provers.Boolector
+                  , Data.SBV.Provers.Bitwuzla
+                  , Data.SBV.Provers.CVC4
+                  , Data.SBV.Provers.CVC5
+                  , Data.SBV.Provers.DReal
+                  , Data.SBV.Provers.MathSAT
+                  , Data.SBV.Provers.Yices
+                  , Data.SBV.Provers.Z3
+                  , Data.SBV.Utils.CrackNum
+                  , Data.SBV.Utils.ExtractIO
+                  , Data.SBV.Utils.Numeric
+                  , Data.SBV.Utils.TDiff
+                  , Data.SBV.Utils.Lib
+                  , Data.SBV.Utils.PrettyNum
+                  , Data.SBV.Utils.SExpr
+
+Library docs
+  import          : common-settings
+  default-language: Haskell2010
+  build-depends   : QuickCheck, template-haskell
+                  , array, async, containers, deepseq, directory, filepath, time
+                  , pretty, process, mtl, random, syb, text, transformers, uniplate
+                  , libBF, sbv
+  Exposed-modules : Documentation.SBV.Examples.BitPrecise.BitTricks
                   , Documentation.SBV.Examples.BitPrecise.BrokenSearch
                   , Documentation.SBV.Examples.BitPrecise.Legato
                   , Documentation.SBV.Examples.BitPrecise.MergeSort
@@ -208,47 +257,6 @@ Library
                   , Documentation.SBV.Examples.Uninterpreted.Shannon
                   , Documentation.SBV.Examples.Uninterpreted.Sort
                   , Documentation.SBV.Examples.Uninterpreted.UISortAllSat
-  other-modules   : Data.SBV.Client
-                  , Data.SBV.Client.BaseIO
-                  , Data.SBV.Core.AlgReals
-                  , Data.SBV.Core.Concrete
-                  , Data.SBV.Core.Data
-                  , Data.SBV.Core.Kind
-                  , Data.SBV.Core.Model
-                  , Data.SBV.Core.Operations
-                  , Data.SBV.Core.Floating
-                  , Data.SBV.Core.Sized
-                  , Data.SBV.Core.SizedFloats
-                  , Data.SBV.Core.Symbolic
-                  , Data.SBV.Control.BaseIO
-                  , Data.SBV.Control.Query
-                  , Data.SBV.Control.Types
-                  , Data.SBV.Control.Utils
-                  , Data.SBV.Compilers.C
-                  , Data.SBV.Compilers.CodeGen
-                  , Data.SBV.Lambda
-                  , Data.SBV.SMT.SMT
-                  , Data.SBV.SMT.SMTLib
-                  , Data.SBV.SMT.SMTLib2
-                  , Data.SBV.SMT.SMTLibNames
-                  , Data.SBV.SMT.Utils
-                  , Data.SBV.Provers.Prover
-                  , Data.SBV.Provers.ABC
-                  , Data.SBV.Provers.Boolector
-                  , Data.SBV.Provers.Bitwuzla
-                  , Data.SBV.Provers.CVC4
-                  , Data.SBV.Provers.CVC5
-                  , Data.SBV.Provers.DReal
-                  , Data.SBV.Provers.MathSAT
-                  , Data.SBV.Provers.Yices
-                  , Data.SBV.Provers.Z3
-                  , Data.SBV.Utils.CrackNum
-                  , Data.SBV.Utils.ExtractIO
-                  , Data.SBV.Utils.Numeric
-                  , Data.SBV.Utils.TDiff
-                  , Data.SBV.Utils.Lib
-                  , Data.SBV.Utils.PrettyNum
-                  , Data.SBV.Utils.SExpr
 
 Test-Suite SBVTest
   import           : common-settings
